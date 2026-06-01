@@ -269,6 +269,12 @@ go get github.com/himclix/rexa@v0.1.0
 
 See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
 
+## Contributing
+
+Contributions are welcome — whether it's a bug report, performance improvement, new feature, or documentation fix.
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for development setup, project structure, performance rules, and PR guidelines.
+
 ## License
 
 MIT

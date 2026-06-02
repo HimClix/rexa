@@ -30,16 +30,16 @@ func (k EngineKind) String() string {
 }
 
 type MetaEngine struct {
-	literal    *LiteralEngine
-	lazydfa    *LazyDFA
-	pikevm     *PikeVM
-	backtrack  *BacktrackEngine
-	prefilter  *bm.Searcher
-	prefix     []rune
-	prog       *compiler.Program
-	useDFA     bool
+	literal      *LiteralEngine
+	lazydfa      *LazyDFA
+	pikevm       *PikeVM
+	backtrack    *BacktrackEngine
+	prefilter    *bm.Searcher
+	prefix       []rune
+	prog         *compiler.Program
+	useDFA       bool
 	useBacktrack bool
-	Used       EngineKind
+	Used         EngineKind
 	// Pre-allocated result slots to avoid per-call allocation
 	cachedResult  MatchResult
 	cachedCaps    [8]CaptureSlot

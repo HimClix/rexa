@@ -228,10 +228,10 @@ func (c *Compiler) compileRepeatOp(node *syntax.Node, min, max int, greedy bool)
 		}
 		splitIdx := c.emit(Inst{Op: InstSplit, Greedy: greedy})
 		if greedy {
-			c.prog.Insts[splitIdx].Out = body.start   // prefer body
+			c.prog.Insts[splitIdx].Out = body.start // prefer body
 			// Out1 = skip (unpatched)
 		} else {
-			c.prog.Insts[splitIdx].Out1 = body.start   // prefer skip
+			c.prog.Insts[splitIdx].Out1 = body.start // prefer skip
 			// Out = skip (unpatched)
 		}
 		c.patchTo(body.out, splitIdx) // loop back

@@ -67,10 +67,10 @@ func (re *Regexp) EngineUsed() string {
 	return re.meta.Used.String()
 }
 
-func (re *Regexp) String() string     { return re.pattern }
-func (re *Regexp) NumSubexp() int     { return re.prog.NumCap }
-func (re *Regexp) Copy() *Regexp      { c := *re; return &c }
-func (re *Regexp) Longest()           { re.longest = true }
+func (re *Regexp) String() string { return re.pattern }
+func (re *Regexp) NumSubexp() int { return re.prog.NumCap }
+func (re *Regexp) Copy() *Regexp  { c := *re; return &c }
+func (re *Regexp) Longest()       { re.longest = true }
 
 func (re *Regexp) LiteralPrefix() (prefix string, complete bool) {
 	return re.prog.LiteralPrefix, re.prog.PrefixComplete

@@ -6,7 +6,7 @@ package bm
 // O(n/m) average-case performance.
 type Searcher struct {
 	pattern []rune
-	shift   [256]int // bad-character shift table (ASCII portion)
+	shift   [256]int     // bad-character shift table (ASCII portion)
 	fullMap map[rune]int // shift for non-ASCII runes in the pattern
 }
 

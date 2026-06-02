@@ -179,7 +179,7 @@ func TestDFAEndAnchorCorrectness(t *testing.T) {
 
 		// Character classes with $
 		{`[a-z]+$`, "hello", true},
-		{`[a-z]+$`, "Hello", true},   // matches "ello" at end
+		{`[a-z]+$`, "Hello", true}, // matches "ello" at end
 		{`[a-z]+$`, "HELLO", false},
 		{`[a-z]+$`, "HELLOworld", true},
 

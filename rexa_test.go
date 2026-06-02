@@ -429,7 +429,7 @@ func TestBackreference(t *testing.T) {
 		{`(\w+)\s+\1`, "abc abc", true},
 		{`(\w+)\s+\1`, "abc abd", false},
 		{`(a+)(b+)\s+\1\2`, "aabb aabb", true},
-		{`(a+)(b+)\s+\1\2`, "aabb abbb", true},  // matches "abb abb" at offset 1
+		{`(a+)(b+)\s+\1\2`, "aabb abbb", true}, // matches "abb abb" at offset 1
 		{`(a+)(b+)\s+\1\2`, "aabb xyzq", false},
 	}
 

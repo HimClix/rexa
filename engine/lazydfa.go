@@ -10,7 +10,7 @@ import (
 
 const (
 	defaultCacheCapacity = 10000 // max DFA states cached
-	maxCacheResets       = 5    // if we reset this many times, give up on DFA
+	maxCacheResets       = 5     // if we reset this many times, give up on DFA
 )
 
 // LazyDFA builds DFA states on the fly from the NFA program.
@@ -34,13 +34,13 @@ type LazyDFA struct {
 }
 
 type dfaState struct {
-	nfaStates    []int              // sorted NFA PCs in this DFA state
-	isMatch      bool               // true if any NFA state is InstMatch
-	needsEndCheck bool              // true if match is only valid at end of input
-	ascii        [128]*dfaState     // fast ASCII transition table
-	next         map[rune]*dfaState // overflow for non-ASCII
-	deadEnd      bool
-	asciiDone    [2]uint64
+	nfaStates     []int              // sorted NFA PCs in this DFA state
+	isMatch       bool               // true if any NFA state is InstMatch
+	needsEndCheck bool               // true if match is only valid at end of input
+	ascii         [128]*dfaState     // fast ASCII transition table
+	next          map[rune]*dfaState // overflow for non-ASCII
+	deadEnd       bool
+	asciiDone     [2]uint64
 }
 
 func NewLazyDFA(prog *compiler.Program, capacity int) *LazyDFA {

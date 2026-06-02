@@ -26,12 +26,12 @@ type btFrame struct {
 }
 
 type btRunner struct {
-	prog      *compiler.Program
-	input     *Input
-	stack     []btFrame
-	steps     int64
-	limit     int64
-	err       error
+	prog  *compiler.Program
+	input *Input
+	stack []btFrame
+	steps int64
+	limit int64
+	err   error
 }
 
 func (e *BacktrackEngine) Search(prog *compiler.Program, input *Input, startPos int) *MatchResult {
